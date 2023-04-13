@@ -2,6 +2,8 @@ package com.epam.esm.repository.repository;
 
 import com.epam.esm.entity.Certificate;
 import com.epam.esm.entity.Tag;
+import com.epam.esm.filter.search.FilterSearch;
+import com.epam.esm.filter.sort.FilterSort;
 import com.epam.esm.repository.BaseRepository;
 
 import java.util.List;
@@ -40,7 +42,7 @@ public interface CertificateRepository extends BaseRepository<Certificate> {
      * @param searchFilter
      * @return
      */
-    List<Certificate> findBySearchFilter(SearchFilter searchFilter);
+    List<Certificate> findBySearchFilter(FilterSearch searchFilter);
 
     /**
      * Get certificates by sortFilter
@@ -48,7 +50,7 @@ public interface CertificateRepository extends BaseRepository<Certificate> {
      * @param sortFilter
      * @return
      */
-    List<Certificate> findBySortFilter(SortFilter sortFilter);
+    List<Certificate> findBySortFilter(FilterSort sortFilter);
 
     /**
      * Update existing certificate
@@ -80,5 +82,5 @@ public interface CertificateRepository extends BaseRepository<Certificate> {
      * @param id Long certificate id
      */
     @Override
-    Void delete(Long id);
+    void delete(Long id);
 }

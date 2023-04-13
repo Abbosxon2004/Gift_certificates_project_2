@@ -56,8 +56,8 @@ public class ProdRepositoryConfig {
      *
      * @param dataSource DataSource
      * @return instance of JdbcTemplate for given datasource
-     * @see com.epam.esm.repository.impl.TagRepositoryImpl#jdbcTemplate
-     * @see com.epam.esm.repository.impl.CertificateRepositoryImpl#jdbcTemplate
+     * @see com.epam.esm.repository.implementation.TagRepositoryImpl#jdbcTemplate
+     * @see com.epam.esm.repository.implementation.CertificateRepositoryImpl#jdbcTemplate
      */
     @Bean
     public JdbcTemplate jdbcTemplate(DataSource dataSource) {

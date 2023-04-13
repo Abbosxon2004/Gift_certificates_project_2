@@ -54,11 +54,11 @@ public class DatabaseQueries {
             "         JOIN certificate_tag ON gift_certificate.id = certificate_tag.certificate_id\n" +
             "         JOIN Tag ON certificate_tag.tag_id = tag.id\n" +
             "WHERE tag.name = ?;";
-    public static final String GIFT_CERTIFICATE_FIND_BY_PART_NAME_OR_DESCRIPTION = "select * from gift_certificate where %s like %s;";
-    public static final String GIFT_CERTIFICATE_FIND_BY_ID = "select * from gift_certificate where id=?;";
-    public static final String GIFT_CERTIFICATE_FIND_ALL = "select * from gift_certificate;";
-    public static final String GIFT_CERTIFICATE_FIND_ALl_SORT_BY_DATE_OR_NAME = "select * from gift_certificate order by %s %s";
-    public static final String GIFT_CERTIFICATE_INSERT = "insert into gift_certificate(name,description,price,duration,created_date,last_updated_date) values(?,?,?,?,now(),now());";
+    public static final String GIFT_CERTIFICATE_FIND_BY_TYPE = "select * from gift_certificate where %s like %s";
+    public static final String GIFT_CERTIFICATE_FIND_BY_ID = "select * from gift_certificate where id=?";
+    public static final String GIFT_CERTIFICATE_FIND_ALL = "select * from gift_certificate";
+    public static final String FIND_ALL_CERTIFICATES_SORT_BY_TYPE_AND_VALUE = "select * from gift_certificate order by %s %s";
+    public static final String GIFT_CERTIFICATE_INSERT = "insert into gift_certificate(name,description,price,duration,created_date,last_updated_date) values(?,?,?,?,now(),now())";
     public static final String GIFT_CERTIFICATE_UPDATE = "update gift_certificate\n" +
             "set name=coalesce(?, name),\n" +
             "    description=COALESCE(?, description),\n" +
@@ -71,10 +71,10 @@ public class DatabaseQueries {
     /**
      * Queries for Certificate_Tag table ↓
      */
+    public static final String CERTIFICATE_TAGS_FIND_ALL_BY_CERTIFICATE_ID = "select * from certificate_tag inner join tag t on t.id = certificate_tag.tag_id where certificate_id = ?";
+    public static final String CERTIFICATE_TAGS_FIND_ALLL = "select * from certificate_tag";
     public static final String CERTIFICATE_TAG_INSERT = "insert into certificate_tag (certificate_id, tag_id) values(?, ?);";
     public static final String CERTIFICATE_TAG_DELETE = "delete from certificate_tag where certificate_id = ?;";
-    public static final String CERTIFICATE_TAG_FIND_CERTIFICATE_ID = "select * from certificate_tag\n" +
-            "         inner join tag on tag.id = certificate_tag.tag_id\n" +
-            "where certificate_id = ?;";
+
 
 }

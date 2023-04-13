@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.epam.esm.repositoryImpl.CertificateImplTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2023-04-13T09:44:43" hostname="DESKTOP-42D3KUQ" time="0.593">
+  <properties/>
+  <testcase name="testFindAll()" classname="com.epam.esm.repositoryImpl.CertificateImplTest" time="0.488"/>
+  <testcase name="testFindBySearchFilter()" classname="com.epam.esm.repositoryImpl.CertificateImplTest" time="0.006"/>
+  <testcase name="testFindById()" classname="com.epam.esm.repositoryImpl.CertificateImplTest" time="0.006"/>
+  <testcase name="testInsertTagsHandleExceptionsIfNotExists()" classname="com.epam.esm.repositoryImpl.CertificateImplTest" time="0.021"/>
+  <testcase name="testFindByTag()" classname="com.epam.esm.repositoryImpl.CertificateImplTest" time="0.009"/>
+  <testcase name="testFindBySortFilter()" classname="com.epam.esm.repositoryImpl.CertificateImplTest" time="0.008"/>
+  <testcase name="testDelete()" classname="com.epam.esm.repositoryImpl.CertificateImplTest" time="0.015"/>
+  <testcase name="testInsert()" classname="com.epam.esm.repositoryImpl.CertificateImplTest" time="0.017"/>
+  <testcase name="testUpdate()" classname="com.epam.esm.repositoryImpl.CertificateImplTest" time="0.008"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO com.epam.esm.repository.implementation.CertificateRepositoryImpl - ********** querying a rows from certificate table ***********
+[Test worker] INFO com.epam.esm.repository.implementation.CertificateRepositoryImpl - ********** querying a rows from certificate table by search filter ***********
+[Test worker] INFO com.epam.esm.repository.implementation.CertificateRepositoryImpl - ********** querying a row from certificate table by id***********
+[Test worker] INFO com.epam.esm.repository.implementation.CertificateRepositoryImpl - ********** adding tags to certificate table ***********
+[Test worker] INFO com.epam.esm.repository.implementation.CertificateRepositoryImpl - ********** querying a rows from certificate table by tag***********
+[Test worker] INFO com.epam.esm.repository.implementation.CertificateRepositoryImpl - ********** querying a rows from certificate table by sort filter***********
+[Test worker] INFO com.epam.esm.repository.implementation.CertificateRepositoryImpl - ********** querying a row from certificate table by id***********
+[Test worker] INFO com.epam.esm.repository.implementation.CertificateRepositoryImpl - ********** querying a rows from certificate table ***********
+[Test worker] INFO com.epam.esm.repository.implementation.CertificateRepositoryImpl - ********** deleting a row from certificate table ***********
+[Test worker] INFO com.epam.esm.repository.implementation.CertificateRepositoryImpl - ********** querying a rows from certificate table ***********
+[Test worker] INFO com.epam.esm.repository.implementation.CertificateRepositoryImpl - ********** querying a row from certificate table by id***********
+[Test worker] INFO com.epam.esm.repository.implementation.CertificateRepositoryImpl - ********** adding a row into certificate table ***********
+[Test worker] INFO com.epam.esm.repository.implementation.CertificateRepositoryImpl - ********** querying a rows from certificate table ***********
+[Test worker] INFO com.epam.esm.repository.implementation.CertificateRepositoryImpl - ********** querying a rows from certificate table ***********
+[Test worker] INFO com.epam.esm.repository.implementation.CertificateRepositoryImpl - ********** querying a rows from certificate table ***********
+[Test worker] INFO com.epam.esm.repository.implementation.CertificateRepositoryImpl - ********** querying a row from certificate table by id***********
+[Test worker] INFO com.epam.esm.repository.implementation.CertificateRepositoryImpl - ********** adding a row into certificate table ***********
+[Test worker] INFO com.epam.esm.repository.implementation.CertificateRepositoryImpl - ********** querying a rows from certificate table ***********
+[Test worker] INFO com.epam.esm.repository.implementation.CertificateRepositoryImpl - ********** updating a row certificate table ***********
+[Test worker] INFO com.epam.esm.repository.implementation.CertificateRepositoryImpl - ********** querying a row from certificate table by id***********
+]]></system-err>
+</testsuite>

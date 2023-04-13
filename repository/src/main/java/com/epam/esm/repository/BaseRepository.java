@@ -8,5 +8,5 @@ public interface BaseRepository<T> {
     Optional<T> findById(Long id);
     void update(T t);
     Long insert(T t);
-    Void delete(Long id);
+    void delete(Long id);
 }

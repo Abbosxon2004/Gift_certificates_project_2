@@ -50,5 +50,5 @@ public interface TagRepository extends BaseRepository<Tag> {
      * @return
      */
     @Override
-    Void delete(Long id);
+    void delete(Long id);
 }

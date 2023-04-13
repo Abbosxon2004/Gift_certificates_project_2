@@ -5,8 +5,8 @@ import lombok.Data;
 
 @Data
 @Builder
-public class SearchFilter {
+public class FilterSearch {
     private String searchValue;
-    private Searchtype searchtype;
+    private SearchType searchType;
     private SearchPlace searchPlace;
 }

@@ -1,14 +1,12 @@
-package com.epam.esm.filter.search;
+package com.epam.esm.filter.sort;
 
-public enum Searchtype {
-    DECRIPTION("description"),
+public enum SortOrder {
 
-    NAME("name");
-
-
+    ASC("asc"),
+    DESC("desc");
     private final String stringValue;
 
-    Searchtype(String stringValue) {
+    SortOrder(String stringValue) {
         this.stringValue = stringValue;
     }
 
