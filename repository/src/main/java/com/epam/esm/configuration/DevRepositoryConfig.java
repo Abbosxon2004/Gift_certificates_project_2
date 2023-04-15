@@ -56,8 +56,6 @@ public class DevRepositoryConfig {
      *
      * @param dataSource DataSource
      * @return instance of JdbcTemplate for given datasource
-     * @see com.epam.esm.repository.implementation.TagRepositoryImpl#jdbcTemplate
-     * @see com.epam.esm.repository.implementation.CertificateRepositoryImpl#jdbcTemplate
      */
     @Bean
     public JdbcTemplate jdbcTemplate(DataSource dataSource) {

@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="gift_certificates">
+    <output-path>$PROJECT_DIR$/out/artifacts/gift_certificates</output-path>
+    <root id="archive" name="gift_certificates.war" />
+  </artifact>
+</component>

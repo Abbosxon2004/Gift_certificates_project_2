@@ -19,7 +19,6 @@ create table tag
     name varchar unique not null
 );
 
-/* many-to-many joining */
 create table certificate_tag
 (
     certificate_id integer not null references gift_certificate (id) on update cascade on delete cascade,

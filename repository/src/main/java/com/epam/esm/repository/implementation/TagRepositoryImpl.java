@@ -1,6 +1,5 @@
 package com.epam.esm.repository.implementation;
 
-import com.epam.esm.entity.Certificate;
 import com.epam.esm.entity.Tag;
 import com.epam.esm.repository.repository.TagRepository;
 import com.epam.esm.util.builder.TagBuilder;
