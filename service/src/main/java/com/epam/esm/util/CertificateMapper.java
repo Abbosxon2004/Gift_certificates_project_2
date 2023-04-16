@@ -7,6 +7,9 @@ import com.epam.esm.service.CertificateService;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+/**
+ * This interface maps {@link Certificate} and {@link CertificateDto} objects to each other.
+ */
 @org.mapstruct.Mapper(componentModel = "spring", uses = {CertificateService.class})
 public interface CertificateMapper {
 

@@ -10,7 +10,6 @@ import com.epam.esm.filter.sort.SortOrder;
 import com.epam.esm.filter.sort.SortType;
 import com.epam.esm.repository.repository.CertificateRepository;
 import com.epam.esm.util.EntityHolder;
-import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -103,10 +102,8 @@ public class CertificateImplTest {
                 .price(50.00)
                 .duration(30).build();
 
-        // Insert the certificate into the database
         Long id = certificateRepository.insert(certificate);
 
-        // Update the certificate with new data
         certificate = Certificate.builder()
                 .id(id)
                 .name("Certificate 1 Updated")
@@ -114,10 +111,8 @@ public class CertificateImplTest {
                 .price(75.00)
                 .duration(60).build();
 
-        // Call the update method to update the certificate in the database
         certificateRepository.update(certificate);
 
-        // Retrieve the certificate from the database and verify that the data was updated
         Certificate updatedCertificate = certificateRepository.findById(id).get();
         assertEquals("Certificate 1 Updated", updatedCertificate.getName());
         assertEquals("This is certificate 1 Updated", updatedCertificate.getDescription());

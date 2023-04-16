@@ -5,6 +5,10 @@ import jakarta.validation.constraints.Pattern;
 import lombok.Builder;
 import lombok.Data;
 
+/**
+ * This class represents a Data Transfer Object (DTO) for a certificate.
+ * It contains information such as the certificate's ID, name, description, price, duration, created date, last updated date, and tags.
+ */
 @Data
 @Builder
 public class CertificateDto {
@@ -18,7 +22,7 @@ public class CertificateDto {
     @NotNull
     private int duration;
     @Pattern(regexp = "(\\d{4}-\\d{2}-\\d{2})[A-Z]+(\\d{2}:\\d{2}:\\d{2}).([0-9+-:]+)", message = "ISO 8601 format")
-    private String created_date;
+    private String createdDate;
     @Pattern(regexp = "(\\d{4}-\\d{2}-\\d{2})[A-Z]+(\\d{2}:\\d{2}:\\d{2}).([0-9+-:]+)", message = "ISO 8601 format")
     private String lastUpdatedDate;
     @NotNull

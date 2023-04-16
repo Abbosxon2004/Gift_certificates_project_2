@@ -3,6 +3,9 @@ package com.epam.esm.entity;
 import lombok.Builder;
 import lombok.Data;
 
+/**
+ * This is a Java class that defines a Tag entity.
+ */
 @Data
 @Builder
 public class Tag implements Comparable<Tag> {

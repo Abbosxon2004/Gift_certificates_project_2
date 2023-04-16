@@ -5,6 +5,10 @@ import lombok.Data;
 
 import java.time.LocalDateTime;
 import java.util.Set;
+
+/**
+ * This is a Java class that defines a Certificate entity.
+ */
 @Data
 @Builder
 public class Certificate {

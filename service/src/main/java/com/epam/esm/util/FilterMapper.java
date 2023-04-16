@@ -10,8 +10,12 @@ import com.epam.esm.filter.sort.SortOrder;
 import com.epam.esm.filter.sort.SortType;
 import com.epam.esm.service.CertificateService;
 
+/**
+ * This is a mapper interface that maps filter and sort DTOs to corresponding filter and sort objects.
+ * It uses the Spring component model and the CertificateService class.
+ * It also provides default methods to map String inputs to corresponding Enum types.
+ */
 @org.mapstruct.Mapper(componentModel = "spring", uses = CertificateService.class)
-
 public interface FilterMapper {
     FilterSort toSortFilter(SortFilterDto sortFilterDTO);
 

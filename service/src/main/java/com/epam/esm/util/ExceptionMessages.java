@@ -1,4 +1,8 @@
 package com.epam.esm.util;
+
+/**
+ * An enum that stores exception messages used in the project
+ */
 public enum ExceptionMessages {
     CERTIFICATE_ID_NOT_FOUND("Requested certificate not found (id %s)"),
     CERTIFICATE_UPDATE_FAILED("Requested certificate updating failed"),

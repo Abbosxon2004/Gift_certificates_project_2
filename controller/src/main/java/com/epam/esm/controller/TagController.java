@@ -18,16 +18,23 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
 
+/**
+ * Controller class for handling requests related to tags.
+ */
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/tags")
 public class TagController {
     private final TagService tagService;
 
+    /**
+     * Method for handling GET requests to retrieve all tags.
+     *
+     * @return a Response object containing the list of all TagDtos or a NOT_FOUND status if no tags are found.
+     */
     @GetMapping
-    public Response<List<TagDto>> getAll() {
+    public Response getAll() {
         try {
             return new Response<>(tagService.findAll());
         } catch (NotFoundException exception) {
@@ -35,6 +42,12 @@ public class TagController {
         }
     }
 
+    /**
+     * Method for handling GET requests to retrieve a specific tag by ID.
+     *
+     * @param id the ID of the tag to retrieve.
+     * @return a Response object containing the TagDto with the specified ID or a NOT_FOUND status if the tag is not found.
+     */
     @GetMapping(value = "/{id}")
     public Response getById(@PathVariable long id) {
         try {
@@ -44,10 +57,16 @@ public class TagController {
         }
     }
 
+    /**
+     * Method for handling POST requests to create a new tag.
+     *
+     * @param tag           the TagDto object containing the information for the new tag.
+     * @param bindingResult the BindingResult object to validate the request body.
+     * @return a Response object containing an OK status and a success message if the tag is successfully created or a BAD_REQUEST status and an error message if the request body is invalid.
+     * @throws ModificationException if there is an error creating the tag.
+     */
     @PostMapping
-    public Response<Object> create(@RequestBody @Valid TagDto tag,
-                                   BindingResult bindingResult)
-            throws ModificationException {
+    public Response<Object> create(@RequestBody @Valid TagDto tag, BindingResult bindingResult) {
         if (bindingResult.hasErrors())
             return new Response<>(HttpStatus.BAD_REQUEST, new InvalidRequestException(bindingResult).getMessage());
 
@@ -59,9 +78,16 @@ public class TagController {
         }
     }
 
+    /**
+     * Method for handling DELETE requests to delete a specific tag by ID.
+     *
+     * @param id the ID of the tag to delete.
+     * @return a Response object containing an OK status and a success message if the tag is successfully deleted, a NOT_FOUND status if the tag is not found or a NOT_MODIFIED status if there is an error deleting the tag.
+     * @throws NotFoundException     if the tag with the specified ID is not found.
+     * @throws ModificationException if there is an error deleting the tag.
+     */
     @DeleteMapping(value = "/{id}")
-    public Response<Object> deleteById(@PathVariable long id)
-            throws NotFoundException, ModificationException {
+    public Response<Object> deleteById(@PathVariable long id) {
         try {
             tagService.delete(id);
             return new Response<>(HttpStatus.OK, "tag was successfully deleted!");

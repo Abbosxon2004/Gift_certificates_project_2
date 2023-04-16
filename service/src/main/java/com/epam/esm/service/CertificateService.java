@@ -23,6 +23,10 @@ import java.util.List;
 
 import static com.epam.esm.util.ExceptionMessages.*;
 
+/**
+ * This class represents the service layer of the certificate entity in the application.
+ * It contains methods for finding, creating, updating and deleting certificates.
+ */
 @Service
 @Transactional
 @RequiredArgsConstructor
@@ -33,6 +37,12 @@ public class CertificateService {
     private final FilterMapper filterMapper;
     private final TagMapper tagMapper;
 
+    /**
+     * This method retrieves all certificates from the database.
+     *
+     * @return a list of CertificateDto objects representing all the certificates in the database.
+     * @throws NotFoundException if no certificates are found in the database.
+     */
     public List<CertificateDto> findAll()
             throws NotFoundException {
         try {
@@ -43,6 +53,13 @@ public class CertificateService {
         }
     }
 
+    /**
+     * This method retrieves a certificate from the database by its ID.
+     *
+     * @param id the ID of the certificate to be retrieved.
+     * @return a CertificateDto object representing the certificate.
+     * @throws NotFoundException if the certificate with the given ID is not found in the database.
+     */
     public CertificateDto findById(Long id) throws NotFoundException {
         try {
             return certificateMapper.toCertificateDTO(certificateRepository.findById(id).get());
@@ -51,6 +68,13 @@ public class CertificateService {
         }
     }
 
+    /**
+     * This method retrieves all certificates from the database that have a given tag.
+     *
+     * @param tag a TagDto object representing the tag to be searched for.
+     * @return a list of CertificateDto objects representing the certificates that have the tag.
+     * @throws NotFoundException if no certificates with the tag are found in the database.
+     */
     public List<CertificateDto> findByTag(TagDto tag) throws NotFoundException {
         try {
             return certificateRepository.findByTag(tagMapper.toTag(tag)).stream()
@@ -60,6 +84,13 @@ public class CertificateService {
         }
     }
 
+    /**
+     * This method retrieves all certificates from the database that match a given search filter.
+     *
+     * @param searchFilter a SearchFilterDto object representing the search filter.
+     * @return a list of CertificateDto objects representing the certificates that match the search filter.
+     * @throws NotFoundException if no certificates that match the search filter are found in the database.
+     */
     public List<CertificateDto> findBySearchFilter(SearchFilterDto searchFilter) throws NotFoundException {
         try {
             return certificateRepository.findBySearchFilter(filterMapper.toSearchFilter(searchFilter)).stream()
@@ -69,6 +100,13 @@ public class CertificateService {
         }
     }
 
+    /**
+     * This method retrieves all certificates from the database that match a given sort filter.
+     *
+     * @param sortFilter a SearchFilterDto object representing the sort filter.
+     * @return a list of CertificateDto objects representing the certificates that match the search filter.
+     * @throws NotFoundException if no certificates that match the search filter are found in the database.
+     */
     public List<CertificateDto> findBySortFilter(SortFilterDto sortFilter) throws NotFoundException {
         try {
             return certificateRepository.findBySortFilter(filterMapper.toSortFilter(sortFilter)).stream()
@@ -78,6 +116,12 @@ public class CertificateService {
         }
     }
 
+    /**
+     * Inserts a new certificate into the database with the provided data.
+     *
+     * @param certificatedto The data for the new certificate as a CertificateDto object.
+     * @throws ModificationException If the creation process fails due to a database error.
+     */
     public void create(CertificateDto certificatedto) throws ModificationException {
         Certificate certificate = certificateMapper.toCertificate(certificatedto);
         try {
@@ -89,6 +133,13 @@ public class CertificateService {
         }
     }
 
+    /**
+     * Updates an existing certificate in the database with the provided data.
+     *
+     * @param certificatedto The data for the updated certificate as a CertificateDto object.
+     * @throws NotFoundException     If the certificate to update does not exist in the database.
+     * @throws ModificationException If the update process fails due to a database error.
+     */
     public void update(CertificateDto certificatedto) throws NotFoundException, ModificationException {
         long id = certificatedto.getId();
         try {
@@ -104,6 +155,13 @@ public class CertificateService {
         }
     }
 
+    /**
+     * Deletes a certificate with the specified ID from the database.
+     *
+     * @param id The ID of the certificate to delete.
+     * @throws NotFoundException     If a certificate with the specified ID does not exist in the database.
+     * @throws ModificationException If the deletion process fails due to a database error.
+     */
     public void delete(Long id) throws NotFoundException, ModificationException {
         try {
             certificateRepository.findById(id);
