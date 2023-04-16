@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CertificateServiceTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2023-04-16T11:21:27" hostname="DESKTOP-42D3KUQ" time="1.583">
+  <properties/>
+  <testcase name="testFindByIdThrowsNotFoundException()" classname="CertificateServiceTest" time="1.323"/>
+  <testcase name="testFindAll()" classname="CertificateServiceTest" time="0.047"/>
+  <testcase name="testUpdateThrowModificationException()" classname="CertificateServiceTest" time="0.017"/>
+  <testcase name="testFindBySearchFilterWithResult()" classname="CertificateServiceTest" time="0.015"/>
+  <testcase name="testDeleteThrowNotFoundException()" classname="CertificateServiceTest" time="0.012"/>
+  <testcase name="testFindBySortFilterWithResult()" classname="CertificateServiceTest" time="0.01"/>
+  <testcase name="testFindById()" classname="CertificateServiceTest" time="0.01"/>
+  <testcase name="testFindBySortFilterWithNoResult()" classname="CertificateServiceTest" time="0.01"/>
+  <testcase name="testFindByTagThrowsNotFoundException()" classname="CertificateServiceTest" time="0.011"/>
+  <testcase name="testFindByTag()" classname="CertificateServiceTest" time="0.014"/>
+  <testcase name="testUpdateThrowNotFoundException()" classname="CertificateServiceTest" time="0.012"/>
+  <testcase name="testCreate()" classname="CertificateServiceTest" time="0.012"/>
+  <testcase name="testDelete()" classname="CertificateServiceTest" time="0.011"/>
+  <testcase name="testUpdate()" classname="CertificateServiceTest" time="0.01"/>
+  <testcase name="testFindBySearchFilterWithNoResult()" classname="CertificateServiceTest" time="0.009"/>
+  <testcase name="testDeleteThrowModificationException()" classname="CertificateServiceTest" time="0.011"/>
+  <testcase name="testFindAllThrowsNotFoundException()" classname="CertificateServiceTest" time="0.007"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
