@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.epam.esm.repositoryImpl.CertificateImplTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2023-04-16T07:45:23" hostname="DESKTOP-42D3KUQ" time="0.571">
+<testsuite name="com.epam.esm.repositoryImpl.CertificateImplTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2023-04-17T06:17:25" hostname="DESKTOP-42D3KUQ" time="0.543">
   <properties/>
-  <testcase name="testFindAll()" classname="com.epam.esm.repositoryImpl.CertificateImplTest" time="0.464"/>
+  <testcase name="testFindAll()" classname="com.epam.esm.repositoryImpl.CertificateImplTest" time="0.39"/>
   <testcase name="testFindBySearchFilter()" classname="com.epam.esm.repositoryImpl.CertificateImplTest" time="0.009"/>
-  <testcase name="testFindById()" classname="com.epam.esm.repositoryImpl.CertificateImplTest" time="0.009"/>
-  <testcase name="testInsertTagsHandleExceptionsIfNotExists()" classname="com.epam.esm.repositoryImpl.CertificateImplTest" time="0.016"/>
-  <testcase name="testFindByTag()" classname="com.epam.esm.repositoryImpl.CertificateImplTest" time="0.006"/>
-  <testcase name="testFindBySortFilter()" classname="com.epam.esm.repositoryImpl.CertificateImplTest" time="0.008"/>
-  <testcase name="testDelete()" classname="com.epam.esm.repositoryImpl.CertificateImplTest" time="0.016"/>
-  <testcase name="testInsert()" classname="com.epam.esm.repositoryImpl.CertificateImplTest" time="0.019"/>
-  <testcase name="testUpdate()" classname="com.epam.esm.repositoryImpl.CertificateImplTest" time="0.01"/>
+  <testcase name="testFindById()" classname="com.epam.esm.repositoryImpl.CertificateImplTest" time="0.008"/>
+  <testcase name="testInsertTagsHandleExceptionsIfNotExists()" classname="com.epam.esm.repositoryImpl.CertificateImplTest" time="0.024"/>
+  <testcase name="testFindByTag()" classname="com.epam.esm.repositoryImpl.CertificateImplTest" time="0.008"/>
+  <testcase name="testFindBySortFilter()" classname="com.epam.esm.repositoryImpl.CertificateImplTest" time="0.01"/>
+  <testcase name="testDelete()" classname="com.epam.esm.repositoryImpl.CertificateImplTest" time="0.02"/>
+  <testcase name="testInsert()" classname="com.epam.esm.repositoryImpl.CertificateImplTest" time="0.039"/>
+  <testcase name="testUpdate()" classname="com.epam.esm.repositoryImpl.CertificateImplTest" time="0.015"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
