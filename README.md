@@ -85,7 +85,7 @@ These are required and accept String:
 
 ```
 {
-    "sortType": "name or create_date or last_update_date",
+    "sortType": "name or created_date or last_updated_date",
     "sortOrder": "asc or desc"
 }
 ```
@@ -183,7 +183,7 @@ POST `/tags`
 
 ```
 {
-    "name": "text between 3 and 30 characters"
+    "name": "text"
 }
 ```
 
