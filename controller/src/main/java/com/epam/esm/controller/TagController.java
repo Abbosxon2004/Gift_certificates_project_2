@@ -34,7 +34,7 @@ public class TagController {
      * @return a Response object containing the list of all TagDtos or a NOT_FOUND status if no tags are found.
      */
     @GetMapping
-    public Response getAll() {
+    public Response findAll() {
         try {
             return new Response<>(tagService.findAll());
         } catch (NotFoundException exception) {
@@ -49,7 +49,7 @@ public class TagController {
      * @return a Response object containing the TagDto with the specified ID or a NOT_FOUND status if the tag is not found.
      */
     @GetMapping(value = "/{id}")
-    public Response getById(@PathVariable long id) {
+    public Response findById(@PathVariable long id) {
         try {
             return new Response<>(HttpStatus.OK, tagService.findById(id));
         } catch (NotFoundException exception) {
@@ -90,7 +90,7 @@ public class TagController {
     public Response<Object> deleteById(@PathVariable long id) {
         try {
             tagService.delete(id);
-            return new Response<>(HttpStatus.OK, "tag was successfully deleted!");
+            return new Response<>(HttpStatus.NO_CONTENT, "tag was successfully deleted!");
         } catch (NotFoundException exception) {
             return new Response<>(HttpStatus.NOT_FOUND, exception.getMessage());
         } catch (ModificationException exception) {

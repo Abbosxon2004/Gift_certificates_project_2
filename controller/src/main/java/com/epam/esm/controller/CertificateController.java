@@ -30,7 +30,7 @@ public class CertificateController {
      * @return a Response object containing the list of all CertificateDtos or a NOT_FOUND status if no certificates are found.
      */
     @GetMapping
-    public Response getAll() {
+    public Response findAll() {
         try {
             return new Response<>(certificateService.findAll());
         } catch (NotFoundException exception) {
@@ -46,7 +46,7 @@ public class CertificateController {
      */
 
     @GetMapping(value = "/{id}")
-    public Response getById(@PathVariable long id) {
+    public Response findById(@PathVariable long id) {
         try {
             return new Response<>(HttpStatus.OK, certificateService.findById(id));
         } catch (NotFoundException exception) {
@@ -62,7 +62,7 @@ public class CertificateController {
      * @return Response object containing the list of certificates or an error message if none found
      */
     @PostMapping(value = "/byTag")
-    public Response getByTag(@RequestBody @Valid TagDto tag, BindingResult bindingResult) {
+    public Response findByTag(@RequestBody @Valid TagDto tag, BindingResult bindingResult) {
         if (bindingResult.hasErrors())
             return new Response<>(new InvalidRequestException(bindingResult).getViolations(), HttpStatus.BAD_REQUEST, new InvalidRequestException(bindingResult).getMessage());
 
@@ -71,7 +71,6 @@ public class CertificateController {
         } catch (NotFoundException exception) {
             return new Response(HttpStatus.NOT_FOUND, exception.getMessage());
         }
-
     }
 
     /**
@@ -82,7 +81,7 @@ public class CertificateController {
      * @return Response object containing the list of certificates or an error message if none found
      */
     @PostMapping(value = "/search")
-    public Response getBySearchFilter(@RequestBody @Valid SearchFilterDto searchFilter, BindingResult bindingResult) {
+    public Response findBySearchFilter(@RequestBody @Valid SearchFilterDto searchFilter, BindingResult bindingResult) {
         if (bindingResult.hasErrors())
             return new Response<>(new InvalidRequestException(bindingResult).getViolations(), HttpStatus.BAD_REQUEST, new InvalidRequestException(bindingResult).getMessage());
         try {
@@ -100,7 +99,7 @@ public class CertificateController {
      * @return A response containing the retrieved certificates.
      */
     @PostMapping(value = "/sort")
-    public Response getBySortFilter(@RequestBody SortFilterDto sortFilter, BindingResult bindingResult) {
+    public Response findBySortFilter(@RequestBody SortFilterDto sortFilter, BindingResult bindingResult) {
         if (bindingResult.hasErrors())
             return new Response<>(new InvalidRequestException(bindingResult).getViolations(), HttpStatus.BAD_REQUEST, new InvalidRequestException(bindingResult).getMessage());
 

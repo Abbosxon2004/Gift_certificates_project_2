@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CertificateControllerTest" tests="23" skipped="0" failures="0" errors="0" timestamp="2023-04-24T05:37:10" hostname="DESKTOP-42D3KUQ" time="1.402">
+  <properties/>
+  <testcase name="findCertificateByIdThrowNotFoundException()" classname="CertificateControllerTest" time="1.255"/>
+  <testcase name="findBySortFilter()" classname="CertificateControllerTest" time="0.027"/>
+  <testcase name="findBySortFilterNotFoundException()" classname="CertificateControllerTest" time="0.004"/>
+  <testcase name="createCertificate()" classname="CertificateControllerTest" time="0.006"/>
+  <testcase name="editCertificateThrowModificationException()" classname="CertificateControllerTest" time="0.004"/>
+  <testcase name="deleteCertificateThrowNotFoundException()" classname="CertificateControllerTest" time="0.003"/>
+  <testcase name="editCertificate()" classname="CertificateControllerTest" time="0.004"/>
+  <testcase name="findBySearchFilterNotFoundException()" classname="CertificateControllerTest" time="0.004"/>
+  <testcase name="findCertificateById()" classname="CertificateControllerTest" time="0.007"/>
+  <testcase name="editCertificateThrowNotFoundException()" classname="CertificateControllerTest" time="0.004"/>
+  <testcase name="findCertificatesByTagInvalidRequestException()" classname="CertificateControllerTest" time="0.004"/>
+  <testcase name="findCertificatesByTag()" classname="CertificateControllerTest" time="0.003"/>
+  <testcase name="createCertificateInvalidRequestException()" classname="CertificateControllerTest" time="0.002"/>
+  <testcase name="findBySearchFilterInvalidRequestException()" classname="CertificateControllerTest" time="0.002"/>
+  <testcase name="editCertificateInvalidRequestException()" classname="CertificateControllerTest" time="0.002"/>
+  <testcase name="findCertificatesByTagNotFoundExeption()" classname="CertificateControllerTest" time="0.002"/>
+  <testcase name="findAllCertificates()" classname="CertificateControllerTest" time="0.002"/>
+  <testcase name="deleteCertificateThrowModificationException()" classname="CertificateControllerTest" time="0.002"/>
+  <testcase name="findAllCertificatesThrowNotFoundException()" classname="CertificateControllerTest" time="0.005"/>
+  <testcase name="findBySearchFilter()" classname="CertificateControllerTest" time="0.003"/>
+  <testcase name="findBySortFilterInvalidRequestException()" classname="CertificateControllerTest" time="0.003"/>
+  <testcase name="deleteCertificate()" classname="CertificateControllerTest" time="0.004"/>
+  <testcase name="createCertificateThrowModificationException()" classname="CertificateControllerTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
